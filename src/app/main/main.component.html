@@ -1,0 +1,25 @@
+<div class="row">
+    <div class="col-md-4" *ngFor="let x of cars ">
+        <mat-card class="example-card" >
+            
+            <img mat-card-image src="{{x.img}}" alt="">
+            <mat-card-content>
+              <p><strong>
+                {{x.brand | titlecase}}
+            </strong>
+              </p>
+              <p>
+                {{x.fuelType | titlecase}} | {{x.kms}}kms | {{x.type | titlecase}}
+              </p>
+              <p>
+                {{x.price | currency:'INR'}}
+              </p>
+            </mat-card-content>
+
+          </mat-card>
+          
+    </div>
+</div>
+<div class="row">
+
+</div>

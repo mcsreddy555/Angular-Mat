@@ -1,0 +1,17 @@
+<!-- <section class="example-section">
+    
+
+  </section> -->
+
+  <mat-card class="example-card " style="height: 35vh; overflow-y: scroll; margin-bottom:3px">
+      <h5>Brands & Models</h5>
+      <!-- <div class="form-group mb-4">
+        <input class="form-control" type="text" [(ngModel)]="searchText" placeholder="Search">
+      </div> -->
+      <!-- <div *ngIf="(cars | filter: searchText).length > 0; else noResults"> -->
+        <mat-checkbox class="example-margin" *ngFor="let x of cars" value='x'    (click)="selectBrand(x.value)">{{x | titlecase}}</mat-checkbox>
+      <!-- </div> -->
+
+  </mat-card>
+  
+  

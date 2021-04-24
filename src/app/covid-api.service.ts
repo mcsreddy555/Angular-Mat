@@ -11,4 +11,7 @@ export class CovidApiService {
   public covidReports(){
     return this.http.get("https://corona.lmao.ninja/v2/countries")
   }
+
+
+  
 }

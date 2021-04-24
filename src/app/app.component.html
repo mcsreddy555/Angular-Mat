@@ -4,6 +4,9 @@
  </button>
  <span>My App</span>
  <span class="example-spacer"></span>
+ <a mat-raised-button class="example-icon mr-2" routerLink='/covid-result' >Covid19 Details</a>
+ <a mat-raised-button class="example-icon mr-2" routerLink='/charts' >Charts</a>
+ <a mat-raised-button class="example-icon" routerLink='/main' >Main</a>
  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
    <mat-icon>favorite</mat-icon>
  </button>
@@ -12,4 +15,25 @@
 </button>
 </mat-toolbar>
 
-<app-covid19></app-covid19>
+<!-- <a routerLink="/main">Main</a> -->
+<!-- <app-covid19></app-covid19> -->
+<div class="container mt-4">
+  <router-outlet></router-outlet>
+  <div class="row">
+      <div class="col-md-3" style="height: 110vh; overflow-y: scroll;">
+          <app-brands  [cars]="brands"   (newItemEvent)="filterBrand(brands)"></app-brands>
+          <mat-divider></mat-divider>
+          <app-fuel-type [cars]="fuelType" (newItemEvent)="filterFuel($event)"></app-fuel-type>
+          <mat-divider></mat-divider>
+          <app-mileage [cars]="mileage"></app-mileage>
+          <mat-divider></mat-divider>
+          <!-- <app-year ></app-year> -->
+          <app-price [cars]="cars"></app-price>
+      </div>
+      <div class="col-md-9"><app-main [cars]="cars"></app-main></div>
+     
+
+      
+  </div>
+</div>
+
