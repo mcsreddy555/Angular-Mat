@@ -1,4 +1,7 @@
 <div>
+
+  <h5>World Wide Covid-19 Report</h5>
+    
     <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8"  >
 
         <!--- Note that these columns can be defined in any order.
@@ -7,73 +10,73 @@
     <!-- Position Column -->
     <ng-container matColumnDef="country">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Country Name </th>
-        <td mat-cell *matCellDef="let element"> {{element.country}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.country | filter:term}} </td>
       </ng-container>
     
       <!-- Name Column -->
       <ng-container matColumnDef="cases">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Total Cases </th>
-        <td mat-cell *matCellDef="let element"> {{element.cases}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.cases | filter:term }} </td>
       </ng-container>
     
       <!-- Weight Column -->
       <ng-container matColumnDef="todayCases">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Today Cases </th>
-        <td mat-cell *matCellDef="let element"> {{element.todayCases}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.todayCases | filter:term }} </td>
       </ng-container>
     
       <!-- Symbol Column -->
       <ng-container matColumnDef="deaths">
         <th mat-header-cell *matHeaderCellDef mat-sort-header> Total Death </th>
-        <td mat-cell *matCellDef="let element"> {{element.deaths}} </td>
+        <td mat-cell *matCellDef="let element"> {{element.deaths | filter:term }} </td>
       </ng-container>
     
        <!-- Position Column -->
        <ng-container matColumnDef="todayDeaths">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Today Death </th>
-          <td mat-cell *matCellDef="let element"> {{element.todayDeaths}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.todayDeaths | filter:term }} </td>
         </ng-container>
       
         <!-- Name Column -->
         <ng-container matColumnDef="recovered">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Recovered </th>
-          <td mat-cell *matCellDef="let element"> {{element.recovered}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.recovered | filter:term }} </td>
         </ng-container>
       
         <!-- Weight Column -->
         <ng-container matColumnDef="active">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Active </th>
-          <td mat-cell *matCellDef="let element"> {{element.active}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.active | filter:term}} </td>
         </ng-container>
       
         <!-- Symbol Column -->
         <ng-container matColumnDef="critical">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Critical </th>
-          <td mat-cell *matCellDef="let element"> {{element.critical}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.critical | filter:term}} </td>
         </ng-container>
     
          <!-- Position Column -->
       <ng-container matColumnDef="casesPerOneMillion">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Cases/1M </th>
-          <td mat-cell *matCellDef="let element"> {{element.casesPerOneMillion}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.casesPerOneMillion | filter:term}} </td>
         </ng-container>
       
         <!-- Name Column -->
         <ng-container matColumnDef="deathsPerOneMillion">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Death/1M </th>
-          <td mat-cell *matCellDef="let element"> {{element.deathsPerOneMillion}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.deathsPerOneMillion | filter:term}} </td>
         </ng-container>
       
         <!-- Weight Column -->
         <ng-container matColumnDef="tests">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Total test </th>
-          <td mat-cell *matCellDef="let element"> {{element.tests}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.tests | filter:term}} </td>
         </ng-container>
       
         <!-- Symbol Column -->
         <ng-container matColumnDef="testsPerOneMillion">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Test/1M </th>
-          <td mat-cell *matCellDef="let element"> {{element.testsPerOneMillion}} </td>
+          <td mat-cell *matCellDef="let element"> {{element.testsPerOneMillion | filter:term}} </td>
         </ng-container>
         
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
@@ -82,7 +85,7 @@
     
       
     </table>
-    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+    <mat-paginator [pageSizeOptions]="[7, 10, 20]" showFirstLastButtons color='primary'></mat-paginator>
 </div>
 
   

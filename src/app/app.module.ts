@@ -11,14 +11,13 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import {  MatDividerModule, MatPaginatorModule } from '@angular/material';
 import { MainComponent } from './main/main.component';
-import { FiltersComponent } from './filters/filters.component';
+
 import { BrandsComponent } from './filters/brands/brands.component';
 import { PriceComponent } from './filters/price/price.component';
 import { YearComponent } from './filters/year/year.component';
 import { MileageComponent } from './filters/mileage/mileage.component';
 import { FuelTypeComponent } from './filters/fuel-type/fuel-type.component';
-import { FiltersModule } from './filters/filters.module';
-import { FiltersRoutingModule } from './filters/filters-routing.module';
+
 import { AppRoutingModule } from './app-routing.module';
 
 import {MatCardModule} from '@angular/material/card';
@@ -28,6 +27,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import { ChartsModule } from 'ng2-charts';
 import { ChartsComponent } from './charts/charts.component';
 import { FormsModule } from '@angular/forms';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 // import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
@@ -39,7 +39,7 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     Covid19Component,
     MainComponent,
-    FiltersComponent,
+    
     BrandsComponent,
     PriceComponent,
     YearComponent,
@@ -53,12 +53,12 @@ import { FormsModule } from '@angular/forms';
     HttpClientModule,
     AppRoutingModule,
     ChartsModule,
+    Ng2SearchPipeModule,
 
     FormsModule,
     // MDBBootstrapModule.forRoot(),
 
-    // FiltersModule,
-    // FiltersRoutingModule,
+    
 
 
     MatToolbarModule,
